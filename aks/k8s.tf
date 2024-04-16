@@ -57,12 +57,12 @@ resource "azurerm_kubernetes_cluster" "k8s" {
       type = "SystemAssigned"
     }
 
-    addon_profile {
-        oms_agent {
-        enabled                    = true
-        log_analytics_workspace_id = azurerm_log_analytics_workspace.test.id
-        }
-    }
+    #addon_profile {
+    #    oms_agent {
+    #    enabled                    = true
+    #    log_analytics_workspace_id = azurerm_log_analytics_workspace.test.id
+    #    }
+    #}
 
     network_profile {
         load_balancer_sku = "Standard"
